@@ -11,7 +11,6 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-
 export const getQuices = async (): Promise<QuicesResponseModel> => {
 
     try {
@@ -75,7 +74,6 @@ export const login = async (body: Object): Promise<LoginModel> =>{
     }
 }
 
-
 export const createQuiz = async (): Promise<QuizModel> =>{
     try {
         const response = await axios.post(API + 'quiz/create', {}, { headers: headers });
@@ -122,7 +120,6 @@ export const processUpdateAnswers = async (body: Object): Promise<AnswerModel> =
         }
     }
 }
-
 
 export const getAnswersByQuiz = async (id:number): Promise<AnswersGetModel> => {
 
